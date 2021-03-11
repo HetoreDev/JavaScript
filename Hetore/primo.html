@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Número Primo</title>
+</head>
+<style>
+    p{
+        padding: 10px 10px 10px 10px;
+        margin-top: 20px;
+        width: 300px;
+        border-radius: 10px;
+        color: White;
+        font: Normal 16pt Arial;
+    }
+    p#a{
+        background-color: green;
+    }    
+    p#b{
+        background-color: red;
+    }
+    h1{
+        font: bold 20pt Arial;
+    }
+</style>
+<body>
+    <h1>Verifica se Número é Primo</h1>
+    <input type="number" name="n1" id="n1">
+    <input type="button" value="Verificar" onclick="calculaPrimo()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calculaPrimo(){
+            var n1 = document.getElementById('n1')
+            var n2 = Number(n1.value)
+            var div = document.getElementById('res')
+            var primo = 0
+            
+            for(var i = 1; i <= n2; i++){
+                if(n2%i == 0){
+                    primo++
+                }        
+            }
+            if(primo == 2){
+                div.innerHTML = `<p id="a">O número ${n2} <strong>é Primo</strong></p>`
+            }else{
+                div.innerHTML = `<p id="b">O número ${n2} <strong>não é Primo</strong></p>`
+            }
+        }        
+    </script>
+</body>
+</html>

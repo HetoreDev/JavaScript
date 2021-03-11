@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charsert="UTF-8">
+    <meta name="viewport" contet="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 3 - Recebendo e Convertendo Números</title>
+    <style>
+        body {
+            background-color: royalblue;
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1{
+            color: rgba(255, 212, 22);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+      var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+      var n2 = Number.parseFloat(window.prompt('Difite outro número: '))
+      var s = n1 + n2
+      window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)  
+      
+    </script>
+</body>
+</html>
+
+<!-- Para conversão de String é possível utilizar apenas a classe Number, sem especificar o método. Ex. Number(window.prompt('Digite um valor')). Neste caso ele fará a conversão 
+seja um número inteiro ou real
+Para fazer a conversão de um número para String posso usar o método String(n) ou usar o n.toString()
+--> 

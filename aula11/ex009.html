@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 com HTML</title>
+</head>
+<body>
+    <h1>Testando sua nacionalidade</h1>
+    De qual país você é: <input type="text" name="txtnome" id="txtnome">
+    <input type="button" value="Verificar" onclick="testar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function testar(){
+            var nacionalidade = window.document.getElementById('txtnome')
+            var res = window.document.getElementById('res')
+            var país = String(nacionalidade.value)
+                        
+            if(país == 'Brasil' || país == 'brasil'){
+                res.innerHTML = `<p>Então você é <strong>brasileiro</strong></p>`
+            }else{
+                res.innerHTML = `<p>Então você é <strong>estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
